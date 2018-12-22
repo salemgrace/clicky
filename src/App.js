@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PictureCard from "./components/PictureCard";
 import Wrapper from "./components/Wrapper";
 import pictures from "./pictures.json";
@@ -12,31 +12,33 @@ import './App.css';
 //   return random = Math.floor(Math.random()*pictures.length)
 // }
 
-class App extends React.Component {
+class App extends Component {
   state = {
-    pictures,
+    pictures
   }
 
-  pictureClicked = (pictureId) => {
-    let updatedPictures = this.state.pictures.filter((picture) => picture.id /= pictureId)
-    this.setState( {pictures: updatedPictures} );
+  pictureClicked = id => {
+    const pictures = this.state.pictures.filter(picture => picture.id !== id);
+    this.setState({ pictures });
+    console.log(pictures);
   }
   render(){
     return(
-    [<NavBar />,
-    <Jumbotron />,
+    <div>
+    <NavBar />
+    <Jumbotron />
       <Wrapper>
-        {this.state.pictures.map((picture) => {
-          return (
+        {this.state.pictures.map(picture => (
             <PictureCard
+            pictureClicked={this.pictureClicked}
             name={picture.name}
             image={picture.image}
             id={picture.id}
              />
-          )
-        })}
-      </Wrapper>]
-    )
+        ))}
+      </Wrapper>
+      </div>
+    );
   }
 }
 
