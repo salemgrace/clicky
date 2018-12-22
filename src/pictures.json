@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Horse",
+      "image": "https://lorempixel.com/output/animals-q-c-325-325-10.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Giraffe",
+      "image": "https://lorempixel.com/output/animals-q-c-325-325-4.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Pig",
+      "image": "https://lorempixel.com/output/animals-q-c-325-325-6.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Gorilla",
+      "image": "https://lorempixel.com/output/animals-q-c-325-325-2.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Rhino",
+      "image": "https://lorempixel.com/output/animals-q-c-325-325-1.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Dog",
+      "image": "https://lorempixel.com/output/animals-q-c-325-325-9.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Deer",
+      "image": "https://lorempixel.com/output/animals-q-c-325-325-5.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Tiger",
+      "image": "https://lorempixel.com/output/animals-q-c-325-325-3.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Cat",
+      "image": "https://lorempixel.com/output/animals-q-c-325-325-7.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Puppy",
+      "image": "https://lorempixel.com/output/animals-q-c-325-325-8.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Other Cat",
+      "image": "https://lorempixel.com/output/cats-q-c-325-325-9.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Ants",
+      "image": "https://lorempixel.com/output/nature-q-c-325-325-1.jpg"
+    }
+  ]
+  
