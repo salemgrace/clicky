@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PictureCard from "./components/PictureCard";
 import Wrapper from "./components/Wrapper";
-import pictures from "./pictures.json";
 import NavBar from "./components/NavBar";
-import Jumbotron from "./components/Jumbotron/Jumbotron";
+import Jumbotron from "./components/Jumbotron";
+import Footer from "./components/Footer";
+import pictures from "./pictures.json";
 import './App.css';
 
 
@@ -14,29 +15,36 @@ import './App.css';
 
 class App extends Component {
   state = {
+    score: 0,
+    topscore: 0,
     pictures
-  }
+  };
 
   pictureClicked = id => {
     const pictures = this.state.pictures.filter(picture => picture.id !== id);
-    this.setState({ pictures });
-    console.log(pictures);
-  }
-  render(){
-    return(
+    this.setState({ pictures, score: this.state.score + 1 });
+    console.log("updated state post click");
+  };
+
+  render() {
+    return (
     <div>
-    <NavBar />
+    <NavBar 
+      score={this.score}
+      topscore={this.topscore}
+    />
     <Jumbotron />
-      <Wrapper>
+    <Wrapper>
         {this.state.pictures.map(picture => (
             <PictureCard
-            pictureClicked={this.pictureClicked}
-            name={picture.name}
-            image={picture.image}
-            id={picture.id}
-             />
+              pictureClicked={this.pictureClicked}  
+              id={picture.id}
+              name={picture.name}
+              image={picture.image}
+            />
         ))}
-      </Wrapper>
+        </Wrapper>
+      <Footer />
       </div>
     );
   }
