@@ -30,8 +30,8 @@ class App extends Component {
     return (
     <div>
     <NavBar 
-      score={this.score}
-      topscore={this.topscore}
+      score={this.state.score}
+      topscore={this.state.topscore}
     />
     <Jumbotron />
     <Wrapper>
